@@ -1,4 +1,6 @@
 import axios from 'axios';
+import dotenv from 'dotenv';
+dotenv.config();
 import {
     IPatient,
     IEvaluation,
@@ -36,7 +38,7 @@ async function fetch_and_evaluate_patients_data() {
                 `${BASE_URL}/patients?page=${page}&limit=${limit}`,
                 {
                     headers: {
-                        'x-api-key': 'ak_0ab9d4c7d41584c831b845615d8182918bc5f5804a73e91f'
+                        'x-api-key': process.env.X_API_KEY
                     }
                 }
             );
@@ -98,7 +100,7 @@ async function fetch_and_evaluate_patients_data() {
             data_quality_issues
         }, {
             headers: {
-                'x-api-key': 'ak_0ab9d4c7d41584c831b845615d8182918bc5f5804a73e91f'
+                'x-api-key': process.env.X_API_KEY
             }
         });
 

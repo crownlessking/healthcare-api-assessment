@@ -1,6 +1,9 @@
+# folders
+
 dist/*
 node_modules/*
 
-# Source code files
+# files
 
 setup-pnpm-typescript.sh
+.env
